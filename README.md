@@ -5,111 +5,109 @@
 <div align="center">
 <a href="https://discord.gg/nkZnHvD"><img src="https://camo.githubusercontent.com/b12a95e20b7ca35f918c0ab5103fe56b6f44c067/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f636861742d6f6e253230646973636f72642d3732383964612e737667" alt="Discord" /></a>
   
-  **July 2022 update**: beta demo available at https://beta.delaford.com/
-  
-  Let me know your interest on the [GitHub discussions thread](https://github.com/delaford/game/discussions/152)!
-</div>
+Atualização de Julho de 2022: versão beta disponível em https://beta.delaford.com/
 
-<p align="center">
-  <strong>Welcome to Delaford. An online, 2D medieval game using JavaScript and HTML5.</strong>
+Me avise seu interesse no tópico de discussões do GitHub (https://github.com/delaford/game/discussions/152)!
 
-  <img width="704" alt="Game screenshot" src="https://github.com/delaford/game/blob/master/src/assets/github/readme_hero.png">
-</p>
+</div> <p align="center"> <strong>Bem-vindo ao Delaford Game. Um jogo medieval online em 2D, feito com JavaScript e HTML5.</strong> <img width="704" alt="Captura de tela do jogo" src="https://github.com/delaford/game/blob/master/src/assets/github/readme_hero.png"> </p>
 
-## Getting Started
-
-First, fork the repository. Then, go into your favorite terminal.
+  Primeiros Passos
+  Primeiro, faça um fork do repositório. Em seguida, vá até o seu terminal favorito:
 
     git clone git@github.com:YOUR_USERNAME/game.git
     cd game
     npm install
     npm run serve
 
-> `npm run serve` will start the development server and watch for changes on the client-side code inside the `src` folder and otherwise elsewhere applicable.
+> `npm run serve` iniciará o servidor de desenvolvimento e observará mudanças no código do lado do cliente dentro da pasta src e em outras partes aplicáveis.
+Agora, ainda dentro da pasta game, abra outro terminal na mesma localização. Digite e execute:
+ `npm run dev:node`. Isso iniciará o servidor de jogo Node.js.
+Se quiser depurar, digite npm run ndb. O ndb é uma ferramenta de depuração da Google para Node.js que permite ver facilmente todo o contexto e variáveis. Altamente recomendado para facilitar o desenvolvimento.
+Agora você pode visitar http://localhost:8080 para fazer login e começar a desenvolver!
+Por favor, esteja ciente de um possível golpe relacionado ao Delaford que promete dinheiro por testes ou ações similares.
 
-Now, while still inside the `game` folder, open another terminal session in that same location. Type and run `npm run dev:node`. This will start the Node.js game server.
+## Contribuindo
+Confira nosso guia [CONTRIBUTING.md](https://github.com/Delaford/game/blob/master/.github/CONTRIBUTING.md) sobre como você pode participar ativamente do desenvolvimento deste jogo medieval. É bem fácil e divertido!
 
-> If you want to debug, type `npm run ndb`. `ndb` is Google Chrome's Node Debugging tool which allows Node.js programs to be easily debugged and see all its context and variables. Highly recommended for a much easier time.
+## Sistemas e Motores
+Aqui estão os tipos de recursos que serão adicionados como produto mínimo viável (alpha). Não é nada exagerado, mas suficiente para cobrir o básico até que mais seja adicionado. Cada seção possui um link para um projeto que contém suas subtarefas.
 
-Now you may visit `http://localhost:8080` to login and start developing!
+O que significa um item com marca de verificação?
+Quando um item está com marca de verificação, significa que a base foi implementada, mas não necessariamente finalizada. Por exemplo, o Inventário está marcado, mas atualmente só suporta armas. Você pode ajudar a expandir isso.
 
-For a better time, make sure to join the [Discord channel](https://discord.gg/nkZnHvD) to talk to other developers for help and exclusive dicussions!
+ - [Jogador](https://github.com/Delaford/game/projects/1)
+  - [x] Caminhar / pathfinding
+  - [x] Menu de contexto / Ações
+  - [ ]  Vida e status
+  - [x] Inventário
+  - [x] Equipamento do personagem
+  - [ ] Sua primeira missão
 
-> Please be aware of a [possible scam in regards to Delaford](https://github.com/delaford/game#possible-scam-notice) that promises money for testing or similar action.
+- [Interface do usuário](https://github.com/Delaford/game/projects/2)
+  - [x] Aba de inventário
+  - [ ] Aba de missões
+  - [x] Caixa de chat (para jogadores e ações)
+  - [x] Aba de equipamentos
+  - [x] Aparência geral
+  
+ - [NPC](https://github.com/Delaford/game/projects/3)
+  - [x] Comércio (Lojas)
+  - [ ] Interação por diálogo
+  - [x] Caminhando pelo mapa
+  - [x] Banco
 
-## Contributing
+- [Monstros](https://github.com/Delaford/game/projects/3)
+  - [ ] Sistema de Batalha
+  - [ ] Coleta de itens (Loot)
+  - [ ] Aparição (Spawning)
 
-Please check out our [CONTRIBUTING.md](https://github.com/Delaford/game/blob/master/.github/CONTRIBUTING.md) guide on how you can actively participate in the development of this medieval game. It's pretty easy and fun!
+- [Via-Rede/Rede](https://github.com/Delaford/game/projects/5)
+  - [x] Jogadores podem ser ver
+  - [x] Personagens não jogáveis
+  - [ ] Monstros
+  - [ ] Troca entre jogadores
+  - [x] Itens
 
-## Systems and Engines
+- Mundo
+  - [x] Sistema de renascimento
+  - [ ] Habilidades de recurso
+  - [ ] Jogador vs Jogador
+  - [x] Mineração
+  - [ ] Serralharia (Quase finalizado)
+  - [ ] Pescaria
+  - [ ] Culinária
 
-Here are the types of things I will be adding as a minimum viable product (alpha). Not too over the top but enough to cover the basics until more is added. Each section links to a project which will contain its sub-tasks within.
+Quando todos esses itens estiverem marcados, o Delaford estará estável sem mudanças drásticas. Mas, por enquanto, sinta-se à vontade para participar e ajudar a implementar essas funcionalidades!
 
-### What does a checkmark mean?
+## Depuração
+Aprender a depurar neste jogo é essencial para interagir com o servidor Node.js e com o cliente. Sua principal ferramenta deve ser o ndb do Google. Ele oferece uma experiência de depuração drasticamente melhor para o lado do cliente. (https://github.com/GoogleChromeLabs/ndb) tool from Google. 
+Leia mais em: [DEBUGGING.md](debugging.md).
 
-When an item is checkmarked, it means the basic foundation is in place but not necessarily complete. For example, Inventory is checkmarked but it currently only supports weapons. You can help fix that.
+## Noticias
+ Aviso
+Delaford contém trabalhos de várias fontes que não foram criadas diretamente por contribuições internas.
+- Tileset, monstros, itens, personagens por David E. Gervais. · [Licença CC]
+- Música da tela principal por Matthew Pablo. · [Licença CC]
+- Fonte do jogo 'PixelMix' por Andrew Tyler
+- Fonte do chat 'IBM VGA 8' por IBM
+- Heroicons por Steve Schoger
 
-- [Player](https://github.com/Delaford/game/projects/1)
-  - [x] Walking / pathfinding
-  - [x] Context-menu / Actions
-  - [ ] Health and stats
-  - [x] Inventory
-  - [x] Character wear
-  - [ ] Your first quest
-- [User Interface](https://github.com/Delaford/game/projects/2)
-  - [x] Inventory tab
-  - [ ] Quests tab
-  - [x] Chatbox (for players and actions)
-  - [x] Character wear tab
-  - [x] Overall look &amp; feel
-- [NPC](https://github.com/Delaford/game/projects/3)
-  - [x] Trading (Shops)
-  - [ ] Dialog Interaction
-  - [x] Walking around
-  - [x] Banking
-- [Monsters](https://github.com/Delaford/game/projects/3)
-  - [ ] Battle System
-  - [ ] Looting
-  - [ ] Spawning
-- [Networking](https://github.com/Delaford/game/projects/5)
-  - [x] Players see each other
-  - [x] Non-playable characters
-  - [ ] Monsters
-  - [ ] Player trading
-  - [x] Items
-- World
-  - [x] Respawn system
-  - [ ] Player versus Player
-  - [ ] Resource skills
-    - [x] Mining
-    - [ ] Smithing (Almost finished)
-    - [ ] Fishing
-    - [ ] Cooking
+# Status do Site
+O site atualmente está fora do ar. O número de usuários não justificava o custo mensal.
 
-Once all of these items are checked, Delaford will be stable without breaking changes. But for the time being, please jump in and help add some of these features -- if you'd like!
+# Aviso de Golpe
+Contribuintes do Delaford, ou qualquer pessoa associada ao projeto, nunca entrarão em contato oferecendo dinheiro para testes ou solicitando que você baixe algo relacionado ao desenvolvimento do jogo em troca de pagamento ou criptomoeda.
 
-## Debugging
+Recebemos relatos verificados de pessoas fingindo ser donos do Delaford prometendo recompensas se os usuários baixarem pastas com os conteúdos do repositório. Fique atento!
 
-Learning how to debug in this game is critical in order to interact with the Node.js server and to the client. Your primary source should be the [ndb](https://github.com/GoogleChromeLabs/ndb) tool from Google. It is an improved debugging experience which **drastically** improved client-side debugging.
+## 👏 Agradecimentos
+> - `ℹ️ Dan Jasnowski - https://github.com/djasnowski`
 
-Read more at [DEBUGGING.md](debugging.md).
+---
 
-## Notice
+## 📄 Licença
 
-Delaford contains work from multiple sources not organically made by contributions from Delaford directly.
+Este projeto está licenciado sob a Licença  `MIT`. Veja o arquivo [LICENSE](https://github.com/nicollascarvalh0/delaford-game/blob/main/LICENSE) para obter informações adicionais.
 
-- [Tileset, monsters, items, players](http://pousse.rapiere.free.fr/tome/tome-tiles.htm) by David E. Gervais. &middot; [CC license](https://creativecommons.org/licenses/by/3.0/)
-- [Main screen music](https://opengameart.org/content/enchanted-festival) by [Matthew Pablo](http://www.matthewpablo.com). &middot; [CC license](https://creativecommons.org/licenses/by/3.0/)
-- Game font '[PixelMix](https://www.dafont.com/pixelmix.font)' by [Andrew Tyler](http://andrewtyler.net/fonts/)
-- Chat font '[IBM VGA 8](https://int10h.org/oldschool-pc-fonts/fontlist/)' by [IBM](https://www.ibm.com).
-- [Heroicons](https://github.com/sschoger/heroicons-ui) by [Steve Schoger](http://www.steveschoger.com/)
+---
 
-## Website Status
-
-**Website is not currently up.** The number of users did not justify the monthly charge.
-
-## Possible Scam Notice
-
-Delaford contributors nor anyone associated with Delaford will never contact you in regards testing or instructing you to download anything in regards to the development of the game for the reward of payment or digital currency such as cryptocurrency.
-
-We have had verifiable reports of users pretending to be owners of Delaford promising money if they download a folder with the repository's contents inside. Please be aware.
